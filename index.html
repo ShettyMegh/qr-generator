@@ -17,21 +17,26 @@
 
         </div>
 
-        <input class="qr__items qr__input" name="qrUrl" type="url" name="" id="">
-        <select class="qr__items qr__input" name="size" id="">
-            <option value="300x300">300x300</option>
-            <option value="600x600">600x600</option>
-            <option value="900x900">900x900</option>
-        </select>
-        <input class="qr__items qr__btn" type="submit" value="Generate" name="" id="">
+        <form action="">
+            <input class="qr__items qr__input" placeholder="Enter URL" name="qrUrl" type="url" name="" id="">
+            <select class="qr__items qr__input" name="size" id="">
+                <option value="300x300">300x300</option>
+                <option value="600x600">600x600</option>
+                <option value="900x900">900x900</option>
+            </select>
+            <input class="qr__items qr__btn qr__btn--blue" type="submit" value="Generate" name="" id="">
+        </form>
+     
 
 
         <div class="qr__items qr__generated">
-            <img src="./img/qr.png" width="200px" alt="">
-            <a href=""><button class="qr__btn qr__btn--red">Save Image</button></a>
+                <img src="./img/qr.png" width="300px" alt="">
+            <a href="">
+                <button class="qr__btn qr__btn--red">Save Image</button>
+            </a>
         </div>
         <footer>
-            Designed & Developed By Meghanath
+            Designed & Developed By <a href="https://charvikdev.netlify.app" target="_blank"><b>Meghanath</b></a> 
         </footer>
     </div>
 </body>
