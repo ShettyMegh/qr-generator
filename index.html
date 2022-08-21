@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/qrcode-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <title>QR Generator</title>
+</head>
+<body>
+    <div class="qr__card">
+        <div class="qr__items qr__header">
+
+            <img src="./img/qrcode-logo.png" alt="">
+            <h2 class="qr__title">QR Generator</h2>
+
+        </div>
+
+        <input class="qr__items qr__input" name="qrUrl" type="url" name="" id="">
+        <select class="qr__items qr__input" name="size" id="">
+            <option value="300x300">300x300</option>
+            <option value="600x600">600x600</option>
+            <option value="900x900">900x900</option>
+        </select>
+        <input class="qr__items qr__btn" type="submit" value="Generate" name="" id="">
+
+
+        <div class="qr__items qr__generated">
+            <img src="./img/qr.png" width="200px" alt="">
+            <a href=""><button class="qr__btn qr__btn--red">Save Image</button></a>
+        </div>
+        <footer>
+            Designed & Developed By Meghanath
+        </footer>
+    </div>
+</body>
+</html>
