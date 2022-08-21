@@ -104,6 +104,12 @@ a:visited{
     display: none;
 }
 
+
+#saveimage{
+    display: none;
+    text-decoration: none;
+}
+
 @media (max-width:600px){
     
     .qr__card{
