@@ -17,27 +17,31 @@
 
         </div>
 
-        <form action="">
-            <input class="qr__items qr__input" placeholder="Enter URL" name="qrUrl" type="url" name="" id="">
-            <select class="qr__items qr__input" name="size" id="">
-                <option value="300x300">300x300</option>
-                <option value="600x600">600x600</option>
-                <option value="900x900">900x900</option>
+        <form id="generate__form">
+            <input class="qr__items qr__input" placeholder="Enter URL" type="text" name="" id="qrUrl" required>
+    
+            <select class="qr__items qr__input" name="" id="size">
+                <option value="300">300x300</option>
+                <option value="600">600x600</option>
+                <option value="900">900x900</option>
             </select>
-            <input class="qr__items qr__btn qr__btn--blue" type="submit" value="Generate" name="" id="">
+            <input class="qr__items qr__btn qr__btn--blue" id="submitBtn" type="submit" value="Generate" name="" id="">
         </form>
      
 
 
-        <div class="qr__items qr__generated">
-                <img src="./img/qr.png" width="300px" alt="">
-            <a href="">
+        <div id="qrcode" class="qr__items qr__generated">
+            <!-- <a href="">
                 <button class="qr__btn qr__btn--red">Save Image</button>
-            </a>
+            </a> -->
         </div>
+        
         <footer>
             Designed & Developed By <a href="https://charvikdev.netlify.app" target="_blank"><b>Meghanath</b></a> 
         </footer>
     </div>
+
+    <script src="./lib/qrcode.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
