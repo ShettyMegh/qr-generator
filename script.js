@@ -6,7 +6,7 @@ const saveBtn = document.querySelector("#saveimage");
 
 
 if(screenWidth < 600){
-    selectInput.style.display = "none";
+    selectInput.remove();
 }
 
 
@@ -17,13 +17,12 @@ const onSubmitGenerate = (e)=>{
     e.preventDefault();
     qrcode.innerHTML = "";
     const url = document.querySelector("#qrUrl").value;
-    const size = document.querySelector("#size").value;
-    generateQRCode(url,(screenWidth > 600) ? size: 200);
+    const size = document.querySelector("#size");
+    generateQRCode(url,(screenWidth > 600) ? size.value: 200);
     qrcode.style.display="flex";
 
     setTimeout(()=>{
         const qrImgUrl = document.querySelector("#qrcode img").getAttribute('src');
-        console.log(qrImgUrl);
         saveBtn.href = qrImgUrl;
         saveBtn.style.display = "flex";
         
@@ -32,7 +31,8 @@ const onSubmitGenerate = (e)=>{
    
 }
 
-const generateQRCode = (url,size)=>{
+const generateQRCode = (url,size=200)=>{
+    console.log(size);
     let qrcode = new QRCode("qrcode",{
         text:url,
         width:size,
