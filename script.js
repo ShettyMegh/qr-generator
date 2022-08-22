@@ -37,17 +37,15 @@ const onSubmitGenerate = (e)=>{
         generateQRCode(url,(screenWidth > 600) ? size.value: 200);
         qrcode.style.display="flex";
         genBtn.disabled = false;
-
+        setTimeout(()=>{
+            const qrImgUrl = document.querySelector("#qrcode img").getAttribute('src');
+            saveBtn.href = qrImgUrl;
+            saveBtn.style.display = "flex";
+        },50)
     },500)
 
 
-    setTimeout(()=>{
-        const qrImgUrl = document.querySelector("#qrcode img").getAttribute('src');
-        saveBtn.href = qrImgUrl;
-        saveBtn.style.display = "flex";
-        
-        
-    },600)
+    
    
 }
 
