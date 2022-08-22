@@ -1,25 +1,45 @@
 const form = document.querySelector("#generate__form");
 const qrcode = document.querySelector("#qrcode");
+
 const screenWidth = window.innerWidth;
+
 const selectInput = document.querySelector("#size");
 const saveBtn = document.querySelector("#saveimage");
+const spinner = document.querySelector("#spinner");
 
+const genBtn = document.querySelector("#submitBtn");
 
 if(screenWidth < 600){
     selectInput.remove();
 }
 
 
+const showSpinner = ()=>{
+    spinner.style.display = "block";
+}
 
+const hideSpinner = ()=>{
+    spinner.style.display = "none";
+}
 
 
 const onSubmitGenerate = (e)=>{
     e.preventDefault();
+    genBtn.disabled = true;
+
     qrcode.innerHTML = "";
     const url = document.querySelector("#qrUrl").value;
     const size = document.querySelector("#size");
-    generateQRCode(url,(screenWidth > 600) ? size.value: 200);
-    qrcode.style.display="flex";
+        showSpinner();
+    
+    setTimeout(()=>{
+        hideSpinner();
+        generateQRCode(url,(screenWidth > 600) ? size.value: 200);
+        qrcode.style.display="flex";
+        genBtn.disabled = false;
+
+    },500)
+
 
     setTimeout(()=>{
         const qrImgUrl = document.querySelector("#qrcode img").getAttribute('src');
@@ -27,7 +47,7 @@ const onSubmitGenerate = (e)=>{
         saveBtn.style.display = "flex";
         
         
-    },1)
+    },600)
    
 }
 
