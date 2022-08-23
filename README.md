@@ -1,5 +1,5 @@
 # qr-generator
-A simple qr code generator for URL's
+A simple qr code generator for URL's using qrcode.js library
 
 
 
